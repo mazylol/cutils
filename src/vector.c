@@ -18,6 +18,7 @@ void vector_free(const struct vector *vec) {
     for (int i = 0; i < vec->size; i++) {
         free(vec->elements[i]);
     }
+
     free(vec->elements);
 }
 
@@ -28,6 +29,22 @@ void vector_pop(struct vector *vec) {
     }
 
     free(vec->elements[vec->size - 1]);
+    vec->size--;
+    vec->elements = realloc(vec->elements, vec->size * vec->typeSize);
+}
+
+void vector_remove(struct vector *vec, const int index) {
+    if (index < 0 || index >= vec->size) {
+        fprintf(stderr, "Index out of bounds\n");
+        exit(1);
+    }
+
+    free(vec->elements[index]);
+
+    for (int i = index; i < vec->size - 1; i++) {
+        vec->elements[i] = vec->elements[i + 1];
+    }
+
     vec->size--;
     vec->elements = realloc(vec->elements, vec->size * vec->typeSize);
 }

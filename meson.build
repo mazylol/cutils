@@ -1,6 +1,6 @@
 project('cutils', 'c', default_options : ['c_std=c99'])
 
-src = ['src/vector.c']
+src = ['src/vector.c', 'src/linkedlist.c']
 
 install_headers('include/vector.h', subdir : 'cutils')
 
