@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-#include "include/linkedlist.h"
-#include "include/vector.h"
+#include "include/structures/linkedlist.h"
+#include "include/structures/vector.h"
 
 int main() {
     struct vector vec = vector_init(sizeof(int));
