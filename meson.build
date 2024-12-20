@@ -1,8 +1,8 @@
 project('cutils', 'c', default_options : ['c_std=c99'])
 
-src = ['src/vector.c', 'src/linkedlist.c']
+src = ['src/linkedlist.c', 'src/vector.c']
 
-install_headers('include/vector.h', subdir : 'cutils')
+install_headers('include/linkedlist.h', 'include/vector.h', subdir : 'cutils')
 
 cutils = library('cutils', src, install : true)
 
