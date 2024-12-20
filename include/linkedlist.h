@@ -14,7 +14,7 @@ struct linkedlist {
 
 struct linkedlist linkedlist_init(int typeSize);
 
-void linkedlist_free(struct linkedlist *list);
+void linkedlist_free(const struct linkedlist *list);
 
 void linkedlist_push(struct linkedlist *list, const void *element);
 
@@ -32,5 +32,4 @@ void linkedlist_pop(struct linkedlist *list);
 
 void linkedlist_remove(struct linkedlist *list, const int index);
 
-
-#endif //LINKEDLIST_H
+#endif // LINKEDLIST_H

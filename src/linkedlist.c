@@ -1,10 +1,10 @@
 #include "include/linkedlist.h"
 
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 
-struct linkedlist linkedlist_init(int typeSize) {
+struct linkedlist linkedlist_init(const int typeSize) {
     struct linkedlist list = {};
 
     list.head = malloc(sizeof(struct node));
@@ -16,7 +16,7 @@ struct linkedlist linkedlist_init(int typeSize) {
     return list;
 }
 
-void linkedlist_free(struct linkedlist *list) {
+void linkedlist_free(const struct linkedlist *list) {
     struct node *current = list->head;
     struct node *next;
 

@@ -27,4 +27,4 @@ void vector_push_char(struct vector *vec, char element);
 
 void vector_push_string(struct vector *vec, const char *element);
 
-#endif //VECTOR_H
+#endif // VECTOR_H

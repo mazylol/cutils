@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-#include "include/vector.h"
 #include "include/linkedlist.h"
+#include "include/vector.h"
 
 int main() {
     struct vector vec = vector_init(sizeof(int));
@@ -20,8 +20,8 @@ int main() {
     linkedlist_push_int(&list, 10);
     linkedlist_push_int(&list, 20);
 
-    printf("%d\n", *(int *) list.head->data);
-    printf("%d\n", *(int *) list.head->next->data);
+    printf("%d\n", *(int *)list.head->data);
+    printf("%d\n", *(int *)list.head->next->data);
 
     linkedlist_free(&list);
 
